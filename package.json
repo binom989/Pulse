@@ -1,5 +1,5 @@
 {
-  "name": "potolok.github.io",
+  "name": "Pulse.git",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/binom989/potolok.github.io.git"
+    "url": "git+https://github.com/binom989/Pulse.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/binom989/potolok.github.io/issues"
+    "url": "https://github.com/binom989/Pulse.git/issues"
   },
-  "homepage": "https://github.com/binom989/potolok.github.io#readme",
+  "homepage": "https://github.com/binom989/Pulse.git#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
