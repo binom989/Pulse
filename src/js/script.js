@@ -1,6 +1,6 @@
-/* $(document).ready(function(){
+$(document).ready(function(){
     $('.carousel__inner').slick({
-        dots: true,  точки под картинкой
+        dots: true,  /* точки под картинкой */
         infinite: true,
         speed: 1200,
         slidesToShow: 1,
@@ -14,11 +14,21 @@
             settings: {
                 dots: true,
                 arrows: false
-            }
+                }
             }
         ]
-      });
-  }); */
+    });
+      $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
+        $(this)
+          .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
+          .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+        });
+});
+
+
+
+
+
         /* arrows: false, выключение стрелок */ 
 
         /* autoplay: true,
@@ -27,18 +37,18 @@
         /* fade: true,   
         cssEase: 'linear'  */ /* проявление картинки */
 
-const slider = tns({
+/* const slider = tns({
     container: '.carousel__inner',
     items: 1,
     slideBy: 'page',
     autoplay: false,
     controls: false,
     nav: false,
-    });
+    }); */
 
-document.querySelector('.prev').addEventListener('click', function () {
+/* document.querySelector('.prev').addEventListener('click', function () {
     slider.goTo('prev');
 });
 document.querySelector('.next').addEventListener('click', function () {
     slider.goTo('next');
-});
+}); */
