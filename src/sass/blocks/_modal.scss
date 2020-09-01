@@ -44,6 +44,17 @@
         cursor: pointer;
     }
 
+    
+    .error {
+        border: 1px solid blue;
+    }  
+
+    label.error {
+        border: none;
+        text-align: center;
+        margin-bottom: 15px;     
+    }
+
 }
 
 // скрываем модальные окна пока не активные

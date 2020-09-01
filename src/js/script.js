@@ -82,11 +82,100 @@ $(document).ready(function(){
             $('.overlay, #order').fadeIn('slow');
         });
     }); */
-
-    $('#consultation-form').validate();
-    $('#consultation form').validate();
-    $('#order form').validate();
+ 
+/* 
+    $('#consultation-form').validate({   //консультационная форма
+        rules: {
+            name: "required", //обязательное поле
+            phone: "required", //обязательное поле
+            email: {
+                required: true,  //обязательное поле
+                email: true   // проверка эмал ли это
+            }
+        },
+        messages: {
+            name: "Пожалуйста введите свое имя!!! ",
+            phone: "Пожалуйста введите свой телефон!!!",
+            email: {
+              required: "Пожалуйста введите свою почту!!!",
+              email: "Неправильно введен адрес почты"
+            }
+          }
+    });
     
+
+    $('#order form').validate({   //форма для табов
+        rules: {
+            name: "required", //обязательное поле
+            phone: "required", //обязательное поле
+            email: {
+                required: true,  //обязательное поле
+                email: true   // проверка эмал ли это
+            }
+        },
+        messages: {
+            name: "Пожалуйста введите свое имя",
+            phone: "Пожалуйста введите свой телефон",
+            email: {
+              required: "Пожалуйста введите свою почту",
+              email: "Неправильно введен адрес почты"
+            }
+          }
+    });
+  
+
+    $('#consultation form').validate({   // форма для модальных окон
+        rules: {
+            name: "required", //обязательное поле
+            phone: "required", //обязательное поле
+            email: {
+                required: true,  //обязательное поле
+                email: true   // проверка эмал ли это
+            }
+        },
+        messages: {
+            name: "Пожалуйста введите свое имя",
+            phone: "Пожалуйста введите свой телефон",
+            email: {
+              required: "Пожалуйста введите свою почту",
+              email: "Неправильно введен адрес почты"
+            }
+          }
+    });
+*/ 
+
+    function validateForms(form) {  // функция для трех
+        $(form).validate({
+            rules: {
+            name: "required", //обязательное поле
+            phone: "required", //обязательное поле
+            email: {
+                required: true,  //обязательное поле
+                email: true   // проверка эмал ли это
+            }
+        },
+        messages: {
+            name: "Пожалуйста введите свое имя!!! ",
+            phone: "Пожалуйста введите свой телефон!!!",
+            email: {
+              required: "Пожалуйста введите свою почту!!!",
+              email: "Неправильно введен адрес почты"
+
+                }
+              }
+        });
+    };
+
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+/*     
+    $('#consultation form').validateForms(); // форма для модальных окон
+    $('#consultation-form').validateForms();  //консультационная форма
+    $('#order form').validateForms();  //форма для табов
+ */
+
+
 
 });
 
