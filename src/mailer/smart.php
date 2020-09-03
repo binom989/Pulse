@@ -8,17 +8,17 @@ require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
-   //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+// $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.yandex.com';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'binom9';                 // Наш логин
+$mail->Username = 'gradesk03@mail.ru';                 // Наш логин
 $mail->Password = 'jklim098';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
+$mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('yandex.ru', 'Pulse');   // От кого письмо 
+$mail->setFrom('gradesk03@mail.ru', 'Pulse');   // От кого письмо 
 $mail->addAddress('binom9@yandex.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
