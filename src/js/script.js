@@ -175,8 +175,10 @@ $(document).ready(function(){
     $('#consultation-form').validateForms();  //консультационная форма
     $('#order form').validateForms();  //форма для табов
  */
-    $('input[name=phone]').mask("+7 (999) 999-99-99");
+    $('input[name=phone]').mask("+7 (999) 999-99-99");  //маска для телефонов
 
+
+    // отправка данных из формы на почту
     $('form').submit(function(e) {
         e.preventDefault();
         $.ajax({
@@ -187,16 +189,31 @@ $(document).ready(function(){
             $(this).find("input").val("");
             $('#consultation, #order').fadeOut();
             $('.overlay, #thanks').fadeIn('slow');
-
-
             $('form').trigger('reset');
         });
         return false;
     });
+
+
+    // плавный скролинг страницы и клавиша ВВЕРХ
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut()
+        }
+    });
+
+    // плавная прокрутка
+    $("a[href^='#']").click(function(){
+        var _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
+
+
+
 });
-
-
-
 
 
         /* arrows: false, выключение стрелок */ 
