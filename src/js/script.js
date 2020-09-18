@@ -49,9 +49,9 @@ $(document).ready(function(){
                 e.preventDefault();
                 $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
                 $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-            })
+            });
         });
-    };
+    }
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
@@ -164,7 +164,7 @@ $(document).ready(function(){
                 }
               }
         });
-    };
+    }
 
     validateForms('#consultation-form');
     validateForms('#consultation form');
@@ -200,7 +200,7 @@ $(document).ready(function(){
         if($(this).scrollTop() > 1600) {
             $('.pageup').fadeIn();
         } else {
-            $('.pageup').fadeOut()
+            $('.pageup').fadeOut();
         }
     });
 
